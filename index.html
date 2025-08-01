@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>7 Cuts Hair Works | Grand Opening Today!</title>
+    <title>7 Cuts Hair Works | Premium Barber Services</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <style>
@@ -185,74 +185,15 @@
             max-width: 550px;
         }
         
-        .opening-banner {
-            background: linear-gradient(135deg, var(--gold), var(--dark-gold));
-            color: var(--black);
+        .tagline {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.2), rgba(212, 175, 55, 0.1));
+            color: var(--gold);
             padding: 15px 30px;
             border-radius: 5px;
             display: inline-block;
             margin-bottom: 30px;
-            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.4);
-            position: relative;
-            overflow: hidden;
-            animation: bounce 1.5s infinite, glow 2s infinite alternate;
-        }
-        
-        @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-8px); }
-        }
-        
-        @keyframes glow {
-            from { box-shadow: 0 0 10px var(--gold); }
-            to { box-shadow: 0 0 30px var(--gold); }
-        }
-        
-        .opening-banner:before {
-            content: "";
-            position: absolute;
-            top: -10px;
-            left: -10px;
-            right: -10px;
-            bottom: -10px;
-            background: repeating-linear-gradient(
-                45deg,
-                transparent,
-                transparent 10px,
-                rgba(0, 0, 0, 0.1) 10px,
-                rgba(0, 0, 0, 0.1) 20px
-            );
-            z-index: -1;
-        }
-        
-        .confetti {
-            position: absolute;
-            width: 12px;
-            height: 12px;
-            background-color: var(--gold);
-            border-radius: 50%;
-            animation: fall linear infinite;
-            opacity: 0.7;
-            z-index: 1;
-        }
-        
-        @keyframes fall {
-            to {
-                transform: translateY(100vh) rotate(360deg);
-            }
-        }
-        
-        .opening-tag {
-            position: absolute;
-            top: 20px;
-            right: -40px;
-            background: var(--dark-gold);
-            color: var(--black);
-            padding: 10px 40px;
-            font-weight: bold;
-            transform: rotate(45deg);
-            box-shadow: 0 0 10px rgba(0,0,0,0.3);
-            z-index: 10;
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            font-weight: 500;
         }
         
         /* Services Section */
@@ -323,34 +264,58 @@
             color: #ddd;
         }
         
-        /* Special Offer Banner */
-        .special-offer {
-            background: linear-gradient(90deg, #d4af37, #ffd700, #d4af37);
-            padding: 20px;
-            text-align: center;
-            margin: 40px 0;
+        /* Customer Reviews */
+        .reviews {
+            padding: 80px 0;
+            background: var(--black);
+        }
+        
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .review-card {
+            background: rgba(40, 40, 40, 0.7);
             border-radius: 10px;
-            position: relative;
-            overflow: hidden;
-            animation: shimmer 3s infinite;
+            padding: 30px;
+            border: 1px solid rgba(255, 215, 0, 0.1);
         }
         
-        @keyframes shimmer {
-            0% { background-position: -200% 0; }
-            100% { background-position: 200% 0; }
+        .review-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
         }
         
-        .special-offer h3 {
-            color: var(--black);
-            font-size: 1.8rem;
+        .review-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--dark-gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-right: 15px;
+        }
+        
+        .review-stars {
+            color: var(--gold);
             margin-bottom: 10px;
         }
         
-        .special-offer p {
-            color: var(--black);
+        .review-content {
+            font-style: italic;
+            color: #ccc;
+        }
+        
+        .review-author {
+            margin-top: 15px;
             font-weight: 600;
-            font-size: 1.2rem;
-            margin: 0;
+            color: var(--gold);
         }
         
         /* Gallery Section */
@@ -538,28 +503,6 @@
             font-size: 1rem;
             cursor: pointer;
         }
-
-        .form-message {
-            padding: 15px;
-            border-radius: 5px;
-            margin-top: 15px;
-            text-align: center;
-            display: none;
-        }
-        
-        .form-message.success {
-            background: rgba(40, 167, 69, 0.2);
-            border: 1px solid #28a745;
-            color: #28a745;
-            display: block;
-        }
-        
-        .form-message.error {
-            background: rgba(220, 53, 69, 0.2);
-            border: 1px solid #dc3545;
-            color: #dc3545;
-            display: block;
-        }
         
         /* Map Section */
         .map-section {
@@ -677,24 +620,12 @@
                 font-size: 1rem;
             }
             
-            .opening-banner {
-                padding: 12px 20px;
-                font-size: 0.9rem;
-            }
-            
             .section-title {
                 font-size: 2rem;
             }
             
             .contact-content {
                 gap: 30px;
-            }
-            
-            .opening-tag {
-                top: 10px;
-                right: -50px;
-                padding: 8px 35px;
-                font-size: 0.9rem;
             }
         }
         
@@ -719,18 +650,6 @@
                 flex-direction: column;
                 gap: 10px;
             }
-            
-            .opening-tag {
-                top: 5px;
-                right: -60px;
-                padding: 6px 30px;
-                font-size: 0.8rem;
-            }
-        }
-        a {
-            color: var(--gold);
-            text-decoration: none;
-            transition: var(--transition);
         }
     </style>
 </head>
@@ -741,12 +660,13 @@
             <nav class="navbar">
                 <div class="logo">
                     <i class="fas fa-cut logo-icon"></i>
-                    <a href="#home"><h1>7 CUTS HAIR WORKS</h1></a>
+                    <h1>7 CUTS HAIR WORKS</h1>
                 </div>
                 <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
                     <li><a href="#contact">Contact</a></li>
                     <li><a href="#contact" class="book-btn">Book Now</a></li>
                 </ul>
@@ -758,43 +678,18 @@
     <section class="hero" id="home">
         <div class="container">
             <div class="hero-content">
-                <div class="opening-banner">
-                    <h3>GRAND OPENING TODAY - 30th JULY WEDNESDAY</h3>
-                </div>
-                <h2>PREMIUM BARBER EXPERIENCE IN PERIYATHIL</h2>
-                <p>Step into luxury grooming with our expert barbers. Experience precision haircuts, traditional shaves, and premium styling services in an exclusive atmosphere.</p>
-                <a href="#contact" class="book-btn">Book Your Opening Day Appointment</a>
+                <div class="tagline">PREMIUM BARBER EXPERIENCE</div>
+                <h2>PERFECT YOUR STYLE AT PERIYATHIL'S PREMIER BARBER SHOP</h2>
+                <p>Experience the art of precision grooming with our master barbers. From classic cuts to modern styles, we craft the perfect look for every gentleman.</p>
+                <a href="#contact" class="book-btn">Book Your Appointment</a>
             </div>
         </div>
-        
-        <!-- Opening Day Tag -->
-        <div class="opening-tag">TODAY'S THE DAY!</div>
-        
-        <!-- Confetti effect -->
-        <div class="confetti" style="top: 10%; left: 5%;"></div>
-        <div class="confetti" style="top: 15%; left: 15%;"></div>
-        <div class="confetti" style="top: 5%; left: 30%;"></div>
-        <div class="confetti" style="top: 20%; left: 45%;"></div>
-        <div class="confetti" style="top: 12%; left: 60%;"></div>
-        <div class="confetti" style="top: 8%; left: 75%;"></div>
-        <div class="confetti" style="top: 18%; left: 90%;"></div>
-        <div class="confetti" style="top: 3%; left: 25%;"></div>
-        <div class="confetti" style="top: 7%; left: 50%;"></div>
-        <div class="confetti" style="top: 25%; left: 65%;"></div>
-        <div class="confetti" style="top: 13%; left: 40%;"></div>
     </section>
 
     <!-- Services Section -->
     <section class="services" id="services">
         <div class="container">
             <h2 class="section-title">OUR PREMIUM SERVICES</h2>
-            
-            <!-- Special Opening Day Offer -->
-            <div class="special-offer">
-                <h3>GRAND OPENING SPECIAL!</h3>
-                <p>20% OFF ALL SERVICES TODAY ONLY</p>
-            </div>
-            
             <div class="services-grid">
                 <div class="service-card">
                     <i class="fas fa-scissors service-icon"></i>
@@ -830,29 +725,108 @@
         </div>
     </section>
 
+    <!-- Customer Reviews Section -->
+    <section class="reviews" id="reviews">
+        <div class="container">
+            <h2 class="section-title">CLIENT TESTIMONIALS</h2>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div>
+                            <div class="review-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="review-content">
+                                "The best haircut I've ever had! The attention to detail is incredible. This is now my regular barber shop."
+                            </div>
+                            <div class="review-author">- Rajesh Kumar</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div>
+                            <div class="review-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="review-content">
+                                "Professional service in a premium atmosphere. The hot towel shave was an experience I'll be repeating!"
+                            </div>
+                            <div class="review-author">- Anil Menon</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div>
+                            <div class="review-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <div class="review-content">
+                                "Worth every penny! The beard dressing service transformed my look. The staff is friendly and highly skilled."
+                            </div>
+                            <div class="review-author">- Vikram Nair</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Gallery Section -->
     <section class="gallery" id="gallery">
         <div class="container">
-            <h2 class="section-title">GRAND OPENING PREVIEW</h2>
+            <h2 class="section-title">OUR WORK</h2>
             <div class="gallery-grid">
                 <div class="gallery-item">
                     <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Barber cutting hair">
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1599351431408-433ef72fe40b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Beard trimming">
+                    <img src="https://images.unsplash.com/photo-1562788865-563288f47fbb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Beard trimming">
                 </div>
                 <div class="gallery-item">
-                    <img src="shave.jpg" alt="Professional shaving">
+                    <img src="https://images.unsplash.com/photo-1599351431403-891f2b728dbd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Professional shaving">
                 </div>
                 <div class="gallery-item">
                     <img src="https://images.unsplash.com/photo-1595475884562-073c30d45670?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Hair styling">
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Barber shop interior">
+                    <img src="https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Barber shop interior">
                 </div>
                 <div class="gallery-item">
-                    <img src="facial.jpg" alt="Facial treatment">
+                    <img src="https://images.unsplash.com/photo-1622288432450-277d0b6b1dc8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Facial treatment">
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <h2 class="section-title">OUR LOCATION</h2>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.7154146127385!2d76.33920417502013!3d10.04068167295489!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080d514abec6bf%3A0xbd582caa5844192!2sKochi%2C%20Kerala!5e0!3m2!1sen!2sin!4v1690575514721!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
     </section>
@@ -860,15 +834,15 @@
     <!-- Contact Section -->
     <section class="contact" id="contact">
         <div class="container">
-            <h2 class="section-title">VISIT US ON OPENING DAY</h2>
+            <h2 class="section-title">BOOK YOUR APPOINTMENT</h2>
             <div class="contact-content">
                 <div class="contact-info">
                     <h3>7 CUTS HAIR WORKS</h3>
-                    <p>Experience premium grooming services at our newly opened location in Periyathil.</p>
+                    <p>Experience premium grooming services at our Periyathil location.</p>
                     
                     <div class="contact-details">
                         <p><i class="fas fa-map-marker-alt"></i> Periyathil, Main Road, Kochi</p>
-                        <p><i class="fas fa-clock"></i> <strong>Opening Day Hours:</strong> 8:00 AM - 10:00 PM</p>
+                        <p><i class="fas fa-clock"></i> Mon-Sat: 9:00 AM - 8:00 PM, Sun: 10:00 AM - 5:00 PM</p>
                         <p><i class="fas fa-phone"></i> +91 98765 43210</p>
                         <p><i class="fas fa-envelope"></i> info@7cutshairworks.com</p>
                     </div>
@@ -882,13 +856,12 @@
                 </div>
                 
                 <div class="contact-form">
-                    <h3>Book Your Opening Day Appointment</h3>
-                    <form id="booking-form"  action="https://formspree.io/f/xqallagd"
-  method="POST">
-                        <input type="text" name="name" placeholder="Your Name" required>
-                        <input type="tel" name="phone" placeholder="Phone Number" required>
-                        <input type="email" name="email" placeholder="Email Address" required>
-                        <select name="service" required>
+                    <h3>Book Now</h3>
+                    <form>
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="tel" placeholder="Phone Number" required>
+                        <input type="email" placeholder="Email Address" required>
+                        <select required>
                             <option value="" disabled selected>Select Service</option>
                             <option>Hair Cutting</option>
                             <option>Hot Shaving</option>
@@ -898,12 +871,10 @@
                             <option>Premium Styling</option>
                             <option>Complete Grooming Package</option>
                         </select>
-                        <input type="date" name="date" id="appointment-date" required>
-                        <input type="time" name="time" id="appointment-time" min="08:00" max="21:00" required>
-                        <textarea name="message" placeholder="Special Requests"></textarea>
-                        <button type="submit" class="book-btn">Book Now - 20% OFF!</button>
+                        <input type="date" required>
+                        <textarea placeholder="Special Requests"></textarea>
+                        <button type="submit" class="book-btn">Book Appointment</button>
                     </form>
-                    <div id="form-message" class="form-message"></div>
                 </div>
             </div>
         </div>
@@ -924,7 +895,7 @@
                     <a href="#contact">Contact</a>
                     <a href="#">Privacy Policy</a>
                 </div>
-                <p class="copyright">© 2025 7 Cuts Hair Works. All Rights Reserved.</p>
+                <p class="copyright">© 2023 7 Cuts Hair Works. All Rights Reserved.</p>
                 
                 <!-- Design Credit -->
                 <div class="design-credit">
@@ -935,26 +906,8 @@
     </footer>
 
     <script>
-        // Confetti effect for opening day
+        // Smooth scrolling for navigation links
         document.addEventListener('DOMContentLoaded', function() {
-            const hero = document.querySelector('.hero');
-            const colors = ['#FFD700', '#D4AF37', '#FFFFFF', '#FFA500'];
-            
-            // Create more confetti for opening day
-            for (let i = 0; i < 50; i++) {
-                const confetti = document.createElement('div');
-                confetti.classList.add('confetti');
-                confetti.style.left = Math.random() * 100 + '%';
-                confetti.style.top = Math.random() * 20 + '%';
-                confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-                confetti.style.width = (Math.random() * 10 + 5) + 'px';
-                confetti.style.height = confetti.style.width;
-                confetti.style.animationDuration = (Math.random() * 5 + 3) + 's';
-                confetti.style.animationDelay = (Math.random() * 3) + 's';
-                hero.appendChild(confetti);
-            }
-            
-            // Smooth scrolling for navigation links
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
                     e.preventDefault();
@@ -964,86 +917,9 @@
                 });
             });
             
-            // Set date and time for today (opening day) - July 30, 2025
-            const today = new Date(2025, 6, 30); // July 30, 2025 (months are 0-indexed)
-            const formattedDate = today.toISOString().split('T')[0];
-            
-            document.getElementById('appointment-date').value = formattedDate;
-            document.getElementById('appointment-date').min = formattedDate;
-            document.getElementById('appointment-date').max = formattedDate;
-            
-            // Set current time or nearest available time slot
-            const now = new Date();
-            const currentHours = now.getHours();
-            const currentMinutes = now.getMinutes();
-            
-            // Format time to HH:MM
-            const formatTime = (hours, minutes) => {
-                return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}`;
-            };
-            
-            // Set time to current time or next available slot
-            let appointmentTime = formatTime(currentHours, currentMinutes);
-            
-            // Validate against business hours (8am-10pm)
-            if (currentHours < 8) {
-                appointmentTime = '08:00';
-            } else if (currentHours >= 22) {
-                appointmentTime = '21:30'; // Last slot before closing
-            }
-            
-            document.getElementById('appointment-time').value = appointmentTime;
-            
-            // Form submission handling
-            const bookingForm = document.getElementById('booking-form');
-            const formMessage = document.getElementById('form-message');
-            
-            bookingForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                // Form validation
-                const name = this.elements['name'].value.trim();
-                const phone = this.elements['phone'].value.trim();
-                const email = this.elements['email'].value.trim();
-                const service = this.elements['service'].value;
-                const date = this.elements['date'].value;
-                const time = this.elements['time'].value;
-                
-                if (!name || !phone || !email || service === '' || !date || !time) {
-                    showMessage('Please fill in all required fields', 'error');
-                    return;
-                }
-                
-                if (!/^\d{10}$/.test(phone)) {
-                    showMessage('Please enter a valid 10-digit phone number', 'error');
-                    return;
-                }
-                
-                if (!/^\S+@\S+\.\S+$/.test(email)) {
-                    showMessage('Please enter a valid email address', 'error');
-                    return;
-                }
-                
-                // Simulate form submission (in a real scenario, this would be an AJAX call)
-                showMessage('Your appointment has been booked successfully! We will confirm via SMS shortly.', 'success');
-                
-                // Reset form after successful submission
-                setTimeout(() => {
-                    bookingForm.reset();
-                    document.getElementById('appointment-date').value = formattedDate;
-                    document.getElementById('appointment-time').value = appointmentTime;
-                }, 5000);
-            });
-            
-            function showMessage(text, type) {
-                formMessage.textContent = text;
-                formMessage.className = `form-message ${type}`;
-                
-                // Hide message after 5 seconds
-                setTimeout(() => {
-                    formMessage.style.display = 'none';
-                }, 5000);
-            }
+            // Set min date for appointment to today
+            const today = new Date().toISOString().split('T')[0];
+            document.querySelector('input[type="date"]').min = today;
         });
     </script>
 </body>
